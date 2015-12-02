@@ -50,7 +50,14 @@ filetype plugin indent on    " required
 
 syntax on
 colo vibrantink_alex
-colo sorcerer_alex
+"colo sorcerer_alex
+
+" TODO: it's better to do this using ftplugin
+" http://stackoverflow.com/a/5171586/3584944
+
+autocmd BufEnter * colo sorcerer_alex
+autocmd BufEnter *.sh colo vibrantink_alex
+
 
 set nu			"show line numbers
 set relativenumber	"lines numbered ralatively to cur line

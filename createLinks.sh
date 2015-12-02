@@ -4,18 +4,18 @@
 #	if not - copy
 
 #	vimrc
-mv ~/.vimrc ~/old_.vimrc.old  		#	preserve old config
-ln -s ~/configsGit/.vimrc ~/.vimrc 	#	link to a clonned one
+mv ~/.vimrc ~/configsGit/old_.vimrc.old  	#	preserve old config
+ln -s ~/configsGit/.vimrc ~/.vimrc 		#	link to a clonned one
 
 #	vim
-mv ~/.vim ~/old_.vim.old  
+mv ~/.vim ~/configsGit/old_.vim.old  
 ln -s ~/configsGit/.vim ~/.vim
 
 #	bashrc
-mv ~/.bashrc ~/old_.bashrc.old  
+mv ~/.bashrc ~/configsGit/old_.bashrc.old  
 ln -s ~/configsGit/.bashrc ~/.bashrc
 
 #	tmux.conf	
-mv ~/.tmux.conf ~/old_.tmux.conf.old  
+mv ~/.tmux.conf ~/configsGit/old_.tmux.conf.old  
 ln -s ~/configsGit/.tmux.conf ~/.tmux.conf
 
