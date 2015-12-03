@@ -48,6 +48,18 @@ filetype plugin indent on    " required
 
 """""" run :PluginInstall after updating this list
 
+"##############################
+" plugins not in vundle
+
+" pidiction
+filetype plugin on
+let g:pydiction_location = '~/.vim/bundle/pydiction/complete-dict'
+let g:pydiction_menu_height = 10 
+
+"##############################
+
+" personal settings
+
 syntax on
 colo vibrantink_alex
 "colo sorcerer_alex
