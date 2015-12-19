@@ -7,6 +7,10 @@
 mv ~/.vimrc ~/configsGit/old_.vimrc.old  	#	preserve old config
 ln -s ~/configsGit/.vimrc ~/.vimrc 		#	link to a clonned one
 
+#	gvimrc
+mv ~/.gvimrc ~/configsGit/old_.gvimrc.old  	#	preserve old config
+ln -s ~/configsGit/.gvimrc ~/.gvimrc 		#	link to a clonned one
+
 #	vim
 mv ~/.vim ~/configsGit/old_.vim.old  
 ln -s ~/configsGit/.vim ~/.vim

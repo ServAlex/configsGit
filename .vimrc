@@ -60,23 +60,38 @@ let g:pydiction_menu_height = 10
 
 "##############################
 
+
+
+
+
 " personal settings
 
-syntax on
+:syntax on
+"synta on
 colo vibrantink_alex
 "colo sorcerer_alex
 
 " TODO: it's better to do this using ftplugin
 " http://stackoverflow.com/a/5171586/3584944
 
-autocmd BufEnter * colo sorcerer_alex
+"autocmd BufEnter * colo sorcerer_alex
+autocmd BufEnter * colo vibrantink_alex
 autocmd BufEnter *.sh colo vibrantink_alex
 
 
-set nu			"show line numbers
-set relativenumber	"lines numbered ralatively to cur line
+set rnu				" turn relative line numbering on
+"set nu			"show line numbers
+"set relativenumber	"lines numbered ralatively to cur line
 
 set noet	" do not replace tabs with spaces
+
+set wildmenu			" enable suggestion menu for commands
+set ic 				" set ignore case
+set hls				" highlight search matches
+
+
+
+
 
 
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'

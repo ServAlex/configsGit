@@ -11,6 +11,8 @@ PS1='[\u@\h \W]\$ '
 HISTSIZE=2000
 HISTFILESIZE=10000
 
+export LESS='-R'
+export LESSOPEN='|~/.lessfilter %s'
 
 #powerline-daemon -q
 #POWERLINE_BASH_CONTINUATION=1
