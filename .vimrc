@@ -66,8 +66,7 @@ let g:pydiction_menu_height = 10
 
 " personal settings
 
-:syntax on
-"synta on
+syntax on
 colo vibrantink_alex
 "colo sorcerer_alex
 
@@ -75,8 +74,8 @@ colo vibrantink_alex
 " http://stackoverflow.com/a/5171586/3584944
 
 "autocmd BufEnter * colo sorcerer_alex
-autocmd BufEnter * colo vibrantink_alex
-autocmd BufEnter *.sh colo vibrantink_alex
+"autocmd BufEnter * colo vibrantink_alex
+"autocmd BufEnter *.sh colo vibrantink_alex
 
 
 set rnu				" turn relative line numbering on

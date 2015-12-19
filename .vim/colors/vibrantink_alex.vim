@@ -29,6 +29,8 @@ endif
 
 let g:colors_name = "vibrantink_alex"
 
+
+
 if has("gui_running")
     highlight Normal guifg=White   guibg=Black
     highlight Cursor guifg=Black   guibg=Yellow
@@ -48,8 +50,11 @@ if has("gui_running")
     highlight String guifg=#66FF00
     highlight Search guibg=White
     highlight CursorLine guibg=#323300
+	hi Visual guifg=White	guibg=LightBlue gui=NONE
+
 else
     set t_Co=256
+	hi Visual ctermfg=White ctermbg=LightBlue
     highlight Normal ctermfg=White ctermbg=234
     highlight Cursor ctermfg=Black ctermbg=Yellow 
     highlight Keyword ctermfg=202 
@@ -86,3 +91,5 @@ else
 "    highlight CursorLine cterm=NONE ctermbg=246
     " dark gray
 endif
+
+

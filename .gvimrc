@@ -1,12 +1,12 @@
 
 set mousehide                         " hide the mouse when typing text
 "
-highlight Normal   guibg=grey90
-highlight Cursor   guibg=Blue   guifg=NONE
-highlight lCursor  guibg=Cyan   guifg=NONE
-highlight NonText  guibg=grey80
-highlight Constant gui=NONE     guibg=grey95
-highlight Special  gui=NONE     guibg=grey95
+"highlight Normal   guibg=grey90
+"highlight Cursor   guibg=Blue   guifg=NONE
+"highlight lCursor  guibg=Cyan   guifg=NONE
+"highlight NonText  guibg=grey80
+"highlight Constant gui=NONE     guibg=grey95
+"highlight Special  gui=NONE     guibg=grey95
 "
 "-------------------------------------------------------------------------------
 " Moving cursor to other windows:
@@ -37,11 +37,14 @@ inoremap  <RightMouse>  <ESC>
 " use font with clearly distinguishable brackets: ()[]{}
 "-------------------------------------------------------------------------------
 "set guifont=Monospace\ 11
-set guifont=Consolas:h12:cANSI
+"set guifont=Consolas:h12:cANSI
 "
 " 
 "colorscheme desert
-colorscheme sorcerer
+colo sorcerer
+
+set lines=40
+set columns=120
 
 set guioptions -=T		" turn off toolbar
 
