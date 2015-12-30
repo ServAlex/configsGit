@@ -87,7 +87,7 @@ set noet	" do not replace tabs with spaces
 set wildmenu			" enable suggestion menu for commands
 set ic 				" set ignore case
 set hls				" highlight search matches
-
+set is				" incremenal search
 
 
 
