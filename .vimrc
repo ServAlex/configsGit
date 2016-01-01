@@ -1,4 +1,7 @@
 set nocompatible              " be iMproved, required
+
+
+
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -69,6 +72,9 @@ let g:pydiction_menu_height = 10
 syntax on
 colo vibrantink_alex
 "colo sorcerer_alex
+"set t_Co=256
+set t_ut=
+
 
 " TODO: it's better to do this using ftplugin
 " http://stackoverflow.com/a/5171586/3584944
@@ -96,6 +102,7 @@ nnoremap n nzz
 nnoremap N Nzz
 nnoremap * *zz
 nnoremap g* g*zz
+
 
 				" generate replace command with selected text
 vnoremap # y<Esc>:s/<C-r>"/<C-r>"/g

@@ -53,9 +53,12 @@ if has("gui_running")
 	hi Visual guifg=White	guibg=LightBlue gui=NONE
 
 else
+"	use :hi comant to se all the assigned highlight groups
+
     set t_Co=256
 	hi Visual ctermfg=White ctermbg=LightBlue
     highlight Normal ctermfg=White ctermbg=234
+"    highlight Normal ctermfg=White 
     highlight Cursor ctermfg=Black ctermbg=Yellow 
     highlight Keyword ctermfg=202 
     " orange
@@ -87,9 +90,9 @@ else
     " green
     hi Special ctermfg=6
     highlight Search ctermbg=White 
-    highlight CursorLine cterm=NONE ctermbg=235
+"    highlight CursorLine ctermbg=239 ctermfg=246 "cterm=NONE
 "    highlight CursorLine cterm=NONE ctermbg=246
     " dark gray
+    hi LineNr ctermfg=Yellow ctermbg=232
 endif
-
 
