@@ -84,6 +84,9 @@ set t_ut=
 "autocmd BufEnter *.sh colo vibrantink_alex
 
 
+set laststatus=2
+
+
 set rnu				" turn relative line numbering on
 "set nu			"show line numbers
 "set relativenumber	"lines numbered ralatively to cur line
