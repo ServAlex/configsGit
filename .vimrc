@@ -85,12 +85,25 @@ set rnu				" turn relative line numbering on
 set noet	" do not replace tabs with spaces
 
 set wildmenu			" enable suggestion menu for commands
+
 set ic 				" set ignore case
 set hls				" highlight search matches
 set is				" incremenal search
+set so=2			" center the line with search hit
 
+				" bindings to center screen on the current search match
+nnoremap n nzz			
+nnoremap N Nzz
+nnoremap * *zz
+nnoremap g* g*zz
 
+				" generate replace command with selected text
+vnoremap # y<Esc>:s/<C-r>"/<C-r>"/g
+				" generate replace command with word under cursor
+nnoremap # :s/<C-r><C-w>/<C-r><C-w>/g
 
+				" Note the extra space after the second \
+set list lcs=tab:\ \ 
 
 
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
