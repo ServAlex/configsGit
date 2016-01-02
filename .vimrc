@@ -1,7 +1,5 @@
 set nocompatible              " be iMproved, required
 
-
-
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -101,11 +99,17 @@ set is				" incremenal search
 set so=2			" center the line with search hit
 
 				" bindings to center screen on the current search match
-nnoremap n nzz			
-nnoremap N Nzz
-nnoremap * *zz
-nnoremap g* g*zz
+nnoremap <silent> n n:call <SID>MaybeMiddle()<CR>
+nnoremap <silent> N N:call <SID>MaybeMiddle()<CR>
+nnoremap <silent> * *:call <SID>MaybeMiddle()<CR>
+nnoremap <silent> g* g*:call <SID>MaybeMiddle()<CR>
 
+" If cursor is in first or last line of window, scroll to middle line. More options added because of so=0
+function! s:MaybeMiddle()
+  if winline() == 1 || winline() == winheight(0) || winline() == 2 || winline() == 3 || winline() == winheight(0)-1 || winline() == winheight(0)-2
+    normal! zz
+  endif
+endfunction
 
 				" generate replace command with selected text
 vnoremap # y<Esc>:s/<C-r>"/<C-r>"/g
@@ -115,8 +119,16 @@ nnoremap # :s/<C-r><C-w>/<C-r><C-w>/g
 				" Note the extra space after the second \
 set list lcs=tab:\ \ 
 
+				" disable automatic insertion of comment line after comment line
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+set textwidth=0			" disable wrapping of lines
+
+
+
 
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
 

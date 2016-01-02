@@ -50,6 +50,11 @@ set guioptions -=T		" turn off toolbar
 
 :command! -nargs=1 -complete=file O tab drop <args>
 
+"set guifont=Source\ Code\ Pro\ for\ Powerline "make sure to escape the spaces in the name properly
+"set guifont
+"let g:Powerline_symbols = 'unicode'
+"let g:airline_powerline_fonts=1  
+
 " mapping for control-[shift-]tab tab navigation, escapes edit mode
 nnoremap <C-Tab> <C-PageDown> 
 nnoremap <C-S-Tab> <C-PageUp> 
