@@ -8,8 +8,8 @@
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
-HISTSIZE=2000
-HISTFILESIZE=10000
+HISTSIZE=5000
+HISTFILESIZE=100000
 
 export LESS='-R'
 export LESSOPEN='|~/.lessfilter %s'
