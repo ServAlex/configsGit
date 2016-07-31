@@ -23,3 +23,6 @@ ln -s ~/configsGit/.bashrc ~/.bashrc
 mv ~/.tmux.conf ~/configsGit/old_.tmux.conf.old  
 ln -s ~/configsGit/.tmux.conf ~/.tmux.conf
 
+#	mpv
+mv ~/.config/mpv/mpv.conf ~/configsGit/mpv.conf.old
+ln -s ~/configsGit/mpv/mpv.conf ~/.config/mpv/mpv.conf

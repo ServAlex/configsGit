@@ -112,9 +112,9 @@ function! s:MaybeMiddle()
 endfunction
 
 				" generate replace command with selected text
-vnoremap # y<Esc>:s/<C-r>"/<C-r>"/g
+vnoremap # y<Esc>:%s/<C-r>"/<C-r>"/gc
 				" generate replace command with word under cursor
-nnoremap # :s/<C-r><C-w>/<C-r><C-w>/g
+nnoremap # :%s/<C-r><C-w>/<C-r><C-w>/gc
 
 				" Note the extra space after the second \
 set list lcs=tab:\ \ 
