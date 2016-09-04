@@ -136,7 +136,11 @@ nnoremap * *N
 nnoremap <2-leftmouse> *N
 				" select on double click
 
+" switching betwen .h and .c files
+map <F4> :e %:p:s,.h$,.X123X,:s,.c$,.h,:s,.X123X$,.c,<CR>
+map <F4> :e %:p:s,.h$,.X123X,:s,.c$,.h,:s,.X123X$,.c,<CR>
 
+set clipboard=unnamedplus
 
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
@@ -156,4 +160,4 @@ if has("autocmd")
 	      au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
       endif
 
-
+" :so % reload settings from current file, works well with vimrc
