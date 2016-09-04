@@ -86,10 +86,9 @@ set laststatus=2
 
 
 set rnu				" turn relative line numbering on
-"set nu			"show line numbers
-"set relativenumber	"lines numbered ralatively to cur line
+"set nu				"show line numbers
+"set relativenumber		"lines numbered ralatively to cur line
 
-set noet	" do not replace tabs with spaces
 
 set wildmenu			" enable suggestion menu for commands
 
@@ -97,6 +96,13 @@ set ic 				" set ignore case
 set hls				" highlight search matches
 set is				" incremenal search
 set so=2			" center the line with search hit
+
+
+" tabulations
+set tabstop=4
+set softtabstop=0 noexpandtab
+"set noet	" do not replace tabs with spaces
+set shiftwidth=4
 
 				" bindings to center screen on the current search match
 nnoremap <silent> n n:call <SID>MaybeMiddle()<CR>
@@ -106,9 +112,9 @@ nnoremap <silent> g* g*:call <SID>MaybeMiddle()<CR>
 
 " If cursor is in first or last line of window, scroll to middle line. More options added because of so=0
 function! s:MaybeMiddle()
-  if winline() == 1 || winline() == winheight(0) || winline() == 2 || winline() == 3 || winline() == winheight(0)-1 || winline() == winheight(0)-2
+	if winline() == 1 || winline() == winheight(0) || winline() == 2 || winline() == 3 || winline() == winheight(0)-1 || winline() == winheight(0)-2
     normal! zz
-  endif
+	endif
 endfunction
 
 				" generate replace command with selected text
@@ -124,6 +130,11 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 set textwidth=0			" disable wrapping of lines
 
+" search motifications
+nnoremap * *N
+				" dont jump to next occurence on searching word under cursor
+nnoremap <2-leftmouse> *N
+				" select on double click
 
 
 
