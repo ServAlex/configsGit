@@ -25,4 +25,5 @@ ln -s ~/configsGit/.tmux.conf ~/.tmux.conf
 
 #	mpv
 mv ~/.config/mpv/mpv.conf ~/configsGit/mpv.conf.old
-ln -s ~/configsGit/mpv/mpv.conf ~/.config/mpv/mpv.conf
+ln -s ~/configsGit/mpv/ ~/.config/mpv
+#ln -s ~/configsGit/mpv/mpv.conf ~/.config/mpv/mpv.conf
