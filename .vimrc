@@ -73,6 +73,8 @@ colo vibrantink_alex
 "set t_Co=256
 set t_ut=
 
+set backupdir=~/.vim/backup,.
+set directory=~/.vim/backup,.
 
 " TODO: it's better to do this using ftplugin
 " http://stackoverflow.com/a/5171586/3584944

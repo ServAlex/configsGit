@@ -41,7 +41,8 @@ inoremap  <RightMouse>  <ESC>
 "
 " 
 "colorscheme desert
-colo sorcerer
+"colo sorcerer
+colo Mustang
 
 set lines=40
 set columns=120
@@ -62,3 +63,4 @@ nnoremap <C-S-Tab> <C-PageUp>
 inoremap <C-Tab> <esc><C-PageDown> 
 inoremap <C-S-Tab> <esc><C-PageUp> 
 
+"colo Mustang
