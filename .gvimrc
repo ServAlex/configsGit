@@ -7,8 +7,7 @@ set mousehide                         " hide the mouse when typing text
 "highlight NonText  guibg=grey80
 "highlight Constant gui=NONE     guibg=grey95
 "highlight Special  gui=NONE     guibg=grey95
-"
-"-------------------------------------------------------------------------------
+" "-------------------------------------------------------------------------------
 " Moving cursor to other windows:
 "  shift-down   : change window focus to lower one (cyclic)
 "  shift-up     : change window focus to upper one (cyclic)
@@ -64,3 +63,7 @@ inoremap <C-Tab> <esc><C-PageDown>
 inoremap <C-S-Tab> <esc><C-PageUp> 
 
 "colo Mustang
+
+autocmd BufEnter * silent! lcd %:p:h
+" http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file
+
