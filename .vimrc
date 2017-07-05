@@ -59,6 +59,9 @@ let g:pydiction_menu_height = 10
 
 " try snipmate plugin
 
+
+" enable xml tag jumps built in plugin
+runtime macros/matchit.vim
 "##############################
 
 
