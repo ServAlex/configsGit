@@ -1,2 +1,4 @@
 *.old
 *.swp
+.vim/bundle
+backups

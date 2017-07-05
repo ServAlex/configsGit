@@ -68,7 +68,9 @@ let g:pydiction_menu_height = 10
 " personal settings
 
 syntax on
-colo vibrantink_alex
+"colo vibrantink_alex
+colo Mustang
+
 "colo sorcerer_alex
 "set t_Co=256
 set t_ut=
