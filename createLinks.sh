@@ -27,3 +27,11 @@ ln -s ~/configsGit/.tmux.conf ~/.tmux.conf
 mv ~/.config/mpv ~/configsGit/mpv.old
 ln -s ~/configsGit/mpv/ ~/.config/mpv
 #ln -s ~/configsGit/mpv/mpv.conf ~/.config/mpv/mpv.conf
+
+#	Templates
+mv ~/Templates ~/configsGit/old_.Templates.old  
+ln -s ~/configsGit/Templates ~/Templates
+
+#	nautilus scripts
+mv ~/.local/share/nautilus/scripts ~/configsGit/old_.scripts.old  
+ln -s ~/configsGit/scripts ~/.local/share/nautilus/scripts

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+var=$(zenity --entry \
+--title="New File" \
+--text="File Name" \
+--width="160")
+ if [ $? -eq 0 ] && [ "$var" ]; then
+    touch "$var"
+else
+    exit 0
+fi
