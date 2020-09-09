@@ -1,0 +1,96 @@
+#!/bin/bash
+
+
+echo "$1"
+
+filename="${1##*/}"
+
+echo $filename
+
+noExt="${filename%%.*}"
+
+echo $noExt
+
+echo start this shit
+withExt="${noExt}.mka"
+echo $withExt 
+mpv "$1" --audio-file="$withExt"
+
+echo exit
+exit 0
+
+echo 
+echo 
+echo find
+
+find . -type f -name "$noExt*" 
+#-exec sh -c '
+#	echo "$0"
+#' exec-sh {} +
+
+
+
+echo 
+echo 
+echo 
+echo while
+
+find . -type f -name "$noExt*" | while read line; do
+	filenameLocal="${line##*/}"
+	echo "$filenameLocal"
+
+	if [ "$filenameLocal" = "$filename" ]; then
+		echo "file $filenameLocal $filename"
+		echo is original
+	else
+		echo "file $filenameLocal $filename"
+		echo is another
+		echo "audio = $filenameLocal"
+		audio=$filenameLocal
+		echo $audio
+		#mpv $1 
+		echo "launching mpv with $1 and $audio"
+		mpv "$1" --audio-file="$audio"
+		exit 0
+	fi
+done
+
+echo end while
+echo 
+echo 
+echo 
+
+#allfiles=`ls "$noExt"*`
+#allfiles=`find . -type f -name "$noExt*"`
+
+
+echo allfiles
+echo $allfiles
+
+echo for
+#T1="foo"
+#T2="foo2"
+#T2="bar"
+
+#for f in $allfiles;
+#for f in `find . -type f -name "$noExt*"`;
+#do
+#	if [ "$f" = "$filename" ]; then
+#		echo "file $f $filename"
+#		echo is original
+#	else
+##		echo "file $f $filename"
+#		echo is another
+#		#audio=$f
+#	fi
+#done
+
+#echo audio
+#echo $audio
+
+#mpv "$1"
+
+#mpv "$1" --audiofile="$audio"
+
+
+

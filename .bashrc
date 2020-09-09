@@ -25,5 +25,6 @@ export EDITOR=/usr/bin/vim
 export TERM="xterm-256color"
 
 #PATH=$HOME/appimages:$PATH
+export PATH="$PATH:/home/alex/.dotnet/tools"
 
 
